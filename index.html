@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu responsive</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <!-- <link rel="stylesheet" href="./css/responsive.css"> -->
+    <script src="./animations.js"></script>
+</head>
+<body>
+    <header>
+        <div class="btn-menu">
+            <div class="bgr-image"></div>
+        </div>
+        <nav class="navbar">
+            <ul class="main-menu">
+                <li class="menu-item"><p class="M-text">Inicio</p></li>
+                <li class="menu-item"><p class="M-text">Blog</p></li>
+                <li class="menu-item container-submenu">
+                    <p class="M-text btn-container">Productos</p>                    
+                    <ul class="submenu">
+                        <li class="submenu-item container-submenu2">
+                            <p class="SM-text btn-container2">Autos</p>   
+                            <ul class="submenu2">
+                                <li class="submenu2-item"><p class="SM2-text">Volkswagen</p></li>
+                                <li class="submenu2-item"><p class="SM2-text">Ford</p></li>
+                                <li class="submenu2-item"><p class="SM2-text">Toyota</p></li>
+                                <li class="submenu2-item"><p class="SM2-text">Honda</p></li>
+                            </ul>                         
+                        </li>
+                        <li class="submenu-item container-submenu2">
+                            <p class="SM-text btn-container2">Motos</p>
+                            <ul class="submenu2">
+                                <li class="submenu2-item"><p class="SM2-text">Yamaha</p></li>
+                                <li class="submenu2-item"><p class="SM2-text">Honda</p></li>
+                                <li class="submenu2-item"><p class="SM2-text">Susuki</p></li>
+                                <li class="submenu2-item"><p class="SM2-text">Kawasaki</p></li>
+                                <li class="submenu2-item"><p class="SM2-text">Ducati</p></li>
+                            </ul>
+                        </li>
+                        <li class="submenu-item">
+                            <p class="SM-text">Llantas</p>
+                        </li>
+                    </ul>
+                </li>
+                <li class="menu-item container-submenu">
+                    <p class="M-text btn-container">Servicios</p>
+                    <ul class="submenu SecondSubmenu">
+                        <li class="submenu-item"><p class="SM-text">Mantenimiento</p></li>
+                        <li class="submenu-item"><p class="SM-text">Garantias</p></li>
+                    </ul>
+                </li>
+                <li class="menu-item container-submenu">
+                    <p class="M-text btn-container">Iniciar sesion</p>
+                    <div class="submenu submenu-session">
+                        <form class="session-form">
+                            <input type="email" name="user" id="user" placeholder="Usuario">
+                            <input type="password" name="pass" id="pass" placeholder="Contraseña">
+                            <button type="submit">Entrar</button>
+                        </form>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>    
+</body>
+</html>

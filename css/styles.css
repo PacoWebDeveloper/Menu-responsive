@@ -1,0 +1,204 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+:root {
+    --bgrColorHeader: rgb(30, 144, 255);
+    --fontColorHeader: white;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: #ccc;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bgrColorHeader);
+}
+
+.navbar {
+    width: 650px;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-menu {
+    display: none;
+}
+
+.navbar .main-menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    color: white;
+}
+
+.menu-item {
+    width: calc(100% / 5);
+    height: inherit;
+}
+
+.menu-item .M-text {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-item .M-text:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.container-submenu,
+.container-submenu2 {
+    position: relative;
+}
+.submenu,
+.submenu2 {
+    list-style: none;
+    position: absolute;
+    width: 130px; 
+    visibility: hidden;
+}
+.submenu {
+    top: 50px;
+    background-color: rgb(30, 100, 200);
+    box-shadow: 0 3px 3px rgb(60, 60, 60);
+}
+.submenu2 {
+    top: 0;
+    left: 130px;
+    background-color: rgb(30, 80, 180);
+}
+.submenu-session {
+    width: 150px;
+    visibility: hidden;
+}
+.SM-text,
+.SM2-text {
+    display: block;
+    width: 100%;
+    height: 30px;
+    padding: 7px;
+    font-size: 16px;
+    text-align: center;
+}
+.SM-text:hover {
+    background-color: rgb(30, 80, 180, 0.5);
+}
+.SM2-text:hover {
+    background-color: rgb(30, 100, 200, 0.8);
+}
+
+.container-submenu:hover .submenu,
+.container-submenu2:hover .submenu2,
+.container-submenu:hover .submenu-session {
+    visibility: visible;
+}
+
+/* Session menu */
+
+.session-form {
+    padding: 0 10px;
+    background-color: rgb(30, 100, 200);
+    box-shadow: 0 3px 5px rgb(60, 60, 60);
+}
+
+.session-form 
+input[type="email"],
+input[type="password"],
+button[type="submit"] {
+    width: 100%;
+    height: 20px;
+    margin: 5px 0;
+    padding: 0 3px;
+    border-radius: 5px;
+}
+
+.session-form
+button[type="submit"] {
+    background-color: var(--bgrColorHeader);
+    color: var(--fontColorHeader);
+    border: none;
+}
+
+.session-form
+button[type="submit"]:hover {
+    box-shadow: 0 0 5px black;
+}
+/* @import url(./responsive.css); */
+@media screen and (max-width: 900px) {
+    header {      
+        background-color: transparent;
+    }
+    .btn-menu {
+        display: block;
+        width: 100%;
+        height: 50px;
+        padding: 10px;
+        background-color: rgb(30, 144, 255);
+    }
+    .btn-menu .bgr-image {
+        width: 30px;
+        height: 30px;
+        background-image: url(../img/menu.png);
+        background-size: cover;
+        transition: all 300ms;
+    }
+    .navbar {
+        width: 100%;
+        height: 0;
+        flex-direction: column;
+        position: static;
+        transition: all 300ms;
+    }
+    .navbar .main-menu {
+        width: 100%;
+        height: 250px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(80, 80, 80); 
+        box-shadow: 0 3px 5px #666;  
+        position: static;
+        transition: all 300ms;        
+    }
+
+    .container-submenu,
+    .container-submenu2 {
+        position: static;
+    }
+    .submenu,
+    .submenu2 {
+        width: 100%;
+        height: 0;        
+        overflow: hidden;
+        visibility: visible;
+        position: static;      
+        transition: all 300ms;      
+    }
+    
+    .menu-item {
+        width: 100%;
+        height: 50px;
+        transition: all 300ms;
+    }
+
+    .session-form 
+    input[type="email"],
+    input[type="password"],
+    button[type="submit"] {
+        height: 30px;
+    }
+}
